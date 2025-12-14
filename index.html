@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+    <link rel="icon" href="images/image1.avif.avif" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container d-flex align-items-center">
+        <div class="d-flex align-items-center">
+          <!-- Left -->
+          <div class="left-content d-flex align-items-center gap-3">
+            <div class="icon rounded-circle p-3">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div>
+              <h2 class="">What's For Dinner</h2>
+              <p class="text-muted">Your daily meal inspiration</p>
+            </div>
+          </div>
+
+          <!-- Toggle -->
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Right -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 icons gap-4">
+            <li class="nav-item">
+              <a class="active" href="#"
+                ><i class="fs-4 fa-solid fa-bookmark"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#"
+                ><i class="fs-4 fa-solid fa-clock-rotate-left"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#"><i class="fs-4 fa-solid fa-gear"></i></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="images/avatar-4.jpg"
+          class="avatar-4 rounded-circle m-4"
+          alt="avatar"
+        />
+      </div>
+    </nav>
+    <!-- end -->
+
+    <section id="main" class="align-items-center">
+      <div class="container">
+        <div class="row bg bg-white align-items-center">
+          <div class="col-md-5 box position-relative">
+            <img id="image" class="rounded-start-5" src="" alt="" />
+
+            <div class="icon-star position-absolute">
+              <i class="star fa-solid fa-star"></i>
+              <span id="rating">4.8 (356 reviews)</span>
+            </div>
+
+            <div class="items row position-absolute">
+              <div class="col-4 text-center">
+                <i class="fa-solid fa-clock fa-lg" style="color: brown"></i>
+                <p class="m-0">Prep Time</p>
+                <p id="prepTime" class="m-0"></p>
+              </div>
+
+              <div class="col-4 text-center">
+                <i
+                  class="fa-solid fa-fire -burner fa-lg"
+                  style="color: red"
+                ></i>
+                <p class="m-0">Cook Time</p>
+                <p id="cookTime" class="m-0"></p>
+              </div>
+
+              <div class="col-4 text-center">
+                <i class="fa-solid fa-users fa-lg" style="color: blue"></i>
+                <p class="m-0">serving</p>
+                <p id="serving" class="m-0">people</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="d-flex gap-2 py-3">
+              <span id="diffeculty" class="badge rounded-pill text-bg-success"
+                >Easy</span
+              >
+              <span id="nationality" class="badge rounded-pill text-bg-primary"
+                >Seafood</span
+              >
+            </div>
+
+            <header>
+              <h1 id="tittle">Shrimp Scampi</h1>
+              <p id="description" class="text-muted"></p>
+            </header>
+            <div id="alert" class="d-none alert alert-danger" role="alert">
+              This recipe requires more than 45 minuties to preper
+            </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="home-tab-pane"
+                  aria-selected="true"
+                >
+                  <i class="fa-solid fa-list-check"></i> Ingredients
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="text-muted fa-solid fa-book-open"></i> Instructions
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="text-muted fa-solid fa-chart-pie"></i> Nutrition
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="tips-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tips-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="tips-tab-pane"
+                  aria-selected="false"
+                >
+                  <span class="m-0 p-0">
+                    <i class="text-muted fa-solid fa-lightbulb"></i> Chef's
+                    tips</span
+                  >
+                </button>
+              </li>
+            </ul>
+            <hr />
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home-tab-pane"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+                tabindex="0"
+              >
+                <ul
+                  id="ulingredients"
+                  class="d-flex flex-column gap-3 p-4"
+                  style="background-color: #fff9ec; border-radius: 30px"
+                ></ul>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="profile-tab-pane"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+                tabindex="0"
+              >
+                <ul
+                  id="ulinstruction"
+                  style="background-color: #fff9ec; border-radius: 30px"
+                  class="d-flex flex-column gap-3 p-4"
+                ></ul>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="contact-tab-pane"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                tabindex="0"
+              >
+                <div id="nutrition" class="row gx-3 gy-5"></div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="tips-tab-pane"
+                role="tabpanel"
+                aria-labelledby="tips-tab"
+                tabindex="0"
+              >
+                <div id="tips" class=""></div>
+              </div>
+            </div>
+            <hr />
+            <button onclick="randomMath()" class="btn btn-lg btn-danger">
+              <i class="fa-solid fa-rotate"></i>Try Another Recipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
